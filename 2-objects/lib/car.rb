@@ -1,7 +1,11 @@
 # lib/car.rb
 
-class car
+class Car
+  def initialize(sound)
+    @sound = sound
+  end
+
   def rev
-    puts "Vrooooooom"
+    puts @sound
   end
 end
