@@ -2,6 +2,8 @@
 
 class Spaceship
 
+  attr_accessor(:list_of_planets)
+
   # Spaceship.new("Brrrrrrrm", 100)
 
   def initialize(sound, capacity)
@@ -19,7 +21,4 @@ class Spaceship
     @list_of_planets.push(planet_name)
   end
 
-  def list_of_planets
-    @list_of_planets
-  end
 end
