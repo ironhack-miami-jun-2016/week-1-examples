@@ -2,6 +2,7 @@
 
 require_relative("lib/spaceship.rb")
 require_relative("lib/car.rb")
+require_relative("lib/lightspeed_ship.rb")
 
 first_spaceship = Spaceship.new("Woooshhh", 50)
 first_spaceship.fly
@@ -18,6 +19,14 @@ second_spaceship.travel("Venus")
 second_spaceship.travel("Pluto")
 
 p second_spaceship.list_of_planets
+
+puts "\n===================================="
+
+lightspeed_ship = LightspeedShip.new("Bzzzzzt", 20)
+lightspeed_ship.fly
+lightspeed_ship.travel("Black Hole")
+
+puts "\n===================================="
 
 
 first_car = Car.new("Vroom")
