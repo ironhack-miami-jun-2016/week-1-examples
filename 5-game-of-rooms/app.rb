@@ -18,12 +18,16 @@ game.add_room(room5)
 
 game.start
 
-game.move("S")   # Invalid movement
-game.move("W")   # Invalid movement
-game.move("N")
-game.move("E")   # Invalid movement
-game.move("W")
-game.move("S")
-game.move("W")
-game.move("N")
+input = nil
 
+while input != "exit"
+  puts ""
+  puts "Which direction would you like to go in?"
+  input = gets.chomp
+
+  game.move(input)
+
+  if game.ended?
+    break
+  end
+end

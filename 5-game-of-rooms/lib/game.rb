@@ -31,4 +31,8 @@ class Game
       puts @rooms[@current_position].description
     end
   end
+
+  def ended?
+    @current_position == @rooms.length
+  end
 end
