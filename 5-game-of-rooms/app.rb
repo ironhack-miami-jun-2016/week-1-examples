@@ -17,4 +17,13 @@ game.add_room(room4)
 game.add_room(room5)
 
 game.start
-p game
+
+game.move("S")   # Invalid movement
+game.move("W")   # Invalid movement
+game.move("N")
+game.move("E")   # Invalid movement
+game.move("W")
+game.move("S")
+game.move("W")
+game.move("N")
+
