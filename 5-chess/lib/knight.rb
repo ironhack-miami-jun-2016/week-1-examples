@@ -1,12 +1,6 @@
 # lib/knight.rb
 
-class Knight
-  def initialize(x, y, color)
-    @x = x
-    @y = y
-    @color = color
-  end
-
+class Knight < Piece
   def can_move?(final_x, final_y)
     change_x = (final_x - @x).abs
     change_y = (final_y - @y).abs
