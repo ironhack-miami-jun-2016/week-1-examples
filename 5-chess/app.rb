@@ -2,6 +2,7 @@
 
 require_relative("lib/rook.rb")
 require_relative("lib/king.rb")
+require_relative("lib/knight.rb")
 
 
 # --------------------------
@@ -51,16 +52,19 @@ p white_king.can_move?(1, 5) == false
 p white_king.can_move?(1, 1) == false
 
 
+puts ""
+
+
 # --------------------------
 # -------- Knight ----------
 # --------------------------
 
-# white_knight_right = Knight.new(7, 1, "white")
+white_knight_right = Knight.new(7, 1, "white")
 
-# puts "Knight tests"
-# p white_knight_right.can_move?(6, 3) == true
-# p white_knight_right.can_move?(5, 2) == true
+puts "Knight tests"
+p white_knight_right.can_move?(6, 3) == true
+p white_knight_right.can_move?(5, 2) == true
 
-# p white_knight_right.can_move?(7, 4) == false
-# p white_knight_right.can_move?(3, 5) == false
-# p white_knight_right.can_move?(8, 4) == false
+p white_knight_right.can_move?(7, 4) == false
+p white_knight_right.can_move?(3, 5) == false
+p white_knight_right.can_move?(8, 4) == false
