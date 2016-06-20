@@ -7,6 +7,7 @@ require_relative("lib/diagonal_mover.rb")
 require_relative("lib/rook.rb")
 require_relative("lib/king.rb")
 require_relative("lib/knight.rb")
+require_relative("lib/board.rb")
 
 
 # --------------------------
@@ -72,3 +73,34 @@ p white_knight_right.can_move?(5, 2) == true
 p white_knight_right.can_move?(7, 4) == false
 p white_knight_right.can_move?(3, 5) == false
 p white_knight_right.can_move?(8, 4) == false
+
+
+puts ""
+
+
+# ---------------------------
+# --------- Board -----------
+# ---------------------------
+
+my_board = Board.new
+
+my_board.add_piece(white_king)
+my_board.add_piece(white_rook_right)
+my_board.add_piece(white_knight_right)
+
+my_board.add_piece(black_king)
+my_board.add_piece(black_rook_right)
+
+puts "Board tests"
+
+#                          x  y  final_x
+#                          |  |   |
+p my_board.board_can_move?(7, 1,  6, 3) == true
+#                                    |
+#                                    final_y
+
+p my_board.board_can_move?(5, 8,  5, 7) == true
+p my_board.board_can_move?(8, 8,  4, 8) == true
+
+p my_board.board_can_move?(57, 57,  7, 8) == false
+p my_board.board_can_move?(5, 8,  5, 8) == false
